@@ -1,0 +1,37 @@
+<div class="login-box">
+
+  <div class="login">
+    <h1>Virtuora Technologies</h1>
+    <mat-card>
+      <h2>Login</h2>
+
+      <form (submit)="onLogin(loginForm)"  #loginForm="ngForm">
+        <mat-form-field>
+          <mat-label>Select Category</mat-label>
+          <mat-select  #category='ngModel' name='category' ngModel>
+            <mat-option   *ngFor="let cat of categories" [value]="cat.value">
+              {{cat.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email><br>
+          <mat-error *ngIf="emailInput.invalid">Please enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+         <input ngModel type="password" name="password" matInput placeholder="Password" #password="ngModel" required>
+
+        </mat-form-field>
+        <button mat-raised-button
+
+           color="accent"
+          type="submit">Login</button>
+      </form>
+
+    </mat-card>
+  </div>
+
+</div>
+
+
+

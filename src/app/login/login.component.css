@@ -1,0 +1,17 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+mat-card {
+box-shadow: black;
+}
+
+.login {
+  padding: 135px 500px 71px;
+  text-align: center;
+}
